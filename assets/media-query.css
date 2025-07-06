@@ -1,0 +1,50 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    padding-left: 15%;
+  }
+}
+
+@media(max-width:768px){
+  .menu{
+  padding: 50px;
+}
+
+}
+
+
+@media(max-width:320px){
+.img-div{
+   height:150px; 
+   width:150px;
+}
+}
+
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .skill-div {
+    height:600px;
+     width:100%;
+     padding-left:35%;
+  }
+}
+
+
+@media(max-width:320px){
+.exp-img {
+  height: 300px;
+   width:500px;
+}
+}
+
+@media(max-width:320px){
+  .con-img{
+  height:300px;
+}
+}
+
+
+@media(max-width:320px){
+.img-div-home{
+  height:300px; 
+  width:300px;
+}}

@@ -1,0 +1,323 @@
+
+
+
+div{
+
+ font-family: 'Poppins', sans-serif;
+}
+
+
+.nav{
+  background-color:#0077B6;
+  color:#F5F7FA;
+  margin:0px;
+}
+
+.nav-icon{
+  color:#222831;
+  background-color:#0077B6 ;
+}
+
+.portfolio{
+ 
+ font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size:25px;
+  text-decoration: none;
+  color:#222831;
+}
+
+.menu{
+  padding-left:40%;
+    margin:0px;
+}
+
+
+.list{
+  list-style-type: none;
+  padding:0px;
+  
+}
+
+.list li{
+    padding:3px;
+}
+
+
+
+
+.nav{
+  border:2px solid #0077B6;
+  width:100%; 
+}
+
+.menu-list a{
+ 
+ font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+
+  text-decoration: none;
+  color:#222831;
+}
+
+.exp-img{
+  height:600px;
+   width:500px;
+}
+.con-img{
+  height:600px;
+}
+
+.img-div-home{
+  height:500px; 
+  width:500px;
+}
+ 
+    .swiper-slide {
+      
+    
+      width: 400px;
+      height: 460px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      
+      border-radius:20px;
+    }
+
+     .swiper-container1 {
+      width: 100%;
+      height: 400px;
+      display: block;
+    }
+
+    .swiper-slide1 {
+      background:transparent;
+      color: #222831;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius:20px;
+      border:solid 2px #0077B6;
+    }
+
+
+
+      .circle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .circle {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: conic-gradient(#0077B6 85%, #eee 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .circle::before {
+      content: '';
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .circle-content {
+      position: absolute;
+      text-align: center;
+      font-weight: bold;
+      color: #0077B6;
+    }
+
+    .circle-content .label {
+      font-size: 18px;
+    }
+
+    .circle-content .percent {
+      font-size: 16px;
+    }
+
+    /* Hover Tooltip using ::after */
+    .circle::after {
+      content: attr(data-info);
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0077B6;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .circle:hover::after {
+      opacity: 1;
+    }
+
+  .project-card {
+  position: relative;
+  overflow: hidden; /* Ensure overlay doesn't go outside card */
+  z-index: 0;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0076b667;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+  z-index: 1; /* below content */
+  border-radius: 10px;
+  opacity: 1;
+}
+
+
+.project-card-dukaan::after {
+  content: "A WordPress-based website designed for easy content management, featuring customizable themes, plugins, responsive design, and user-friendly interface for all devices.";
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* above overlay, below content */
+  top: 15%;
+  left: 5%;
+}
+.project-card-HomeDoctor::after {
+  content: "HomeDoctor is a healthcare website offering online doctor consultations, appointment booking, patient management, and health services from the comfort of home.";
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* above overlay, below content */
+  top: 15%;
+  left: 5%;
+}
+.project-card-java::after {
+  content: "Java console-based car rental system managing cars, customers, and rentals with pricing logic using object-oriented design for simplicity and scalability.";
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* above overlay, below content */
+  top: 15%;
+  left: 5%;
+}
+.project-card-iot::after {
+  content: "An IoT-based traffic signal system that uses sensors and real-time data to optimize traffic flow and reduce congestion in smart cities.";
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* above overlay, below content */
+  top: 15%;
+  left: 5%;
+}
+
+
+.project-card:hover::before {
+  transform: scaleY(1);
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.card-body {
+  position: relative;
+  z-index: 3; /* Ensure content and buttons are on top */
+}
+
+.git-btn, .prj-btn {
+  position: relative;
+  z-index: 4; /* Make buttons fully clickable */
+}
+
+
+.home{
+  position:relative;
+  background-image: url('./home.jpeg');
+background-size: cover;
+}
+
+
+.certificate{
+  position:relative;
+  background-image: url('./certificate.jpeg');
+background-size: cover;
+
+}
+
+.skill{
+  position:relative;
+  background-image: url('./skills.jpeg');
+background-size: cover;
+
+}
+
+
+ .no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+
+   .skill-div {
+    height:600px;
+     width:300px;
+     padding-left:80px;
+  }
+/*Purpose	Color	Hex Code
+Background	Soft White	#F5F7FA
+Primary Text	Almost Black	#222831
+Primary Accent	Vibrant Blue	#0077B6
+Secondary Accent	Sky Blue	#90E0EF
+Call to Action	Lime Green (for pop)	#00C897
