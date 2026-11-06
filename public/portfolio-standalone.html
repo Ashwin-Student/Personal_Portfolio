@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashwin Debre | IT Infrastructure & System Security Engineer</title>
+  <meta name="description" content="Portfolio of Ashwin Debre, CDAC ITISS Engineer specializing in Enterprise Networks, System Hardening, Cloud Architecture, DevSecOps, and Cyber Defense.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0a0f1d;
+      color: #cbd5e1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .cyber-grid {
+      background-image: 
+        linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .glow-card {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glow-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.45);
+      box-shadow: 0 8px 24px -8px rgba(59, 130, 246, 0.2);
+    }
+
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cursor-blink {
+      animation: cursorBlink 1s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0f1d] text-slate-200 antialiased selection:bg-blue-500/30 selection:text-blue-200 min-h-screen">
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[#0a0f1d]/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+      <a href="#" class="text-base sm:text-lg font-bold tracking-tight text-white hover:text-blue-400 transition-colors whitespace-nowrap shrink-0 flex items-center gap-2">
+        <span class="text-blue-500 font-mono text-sm">&gt;_</span>
+        <span>Ashwin Debre</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#tools" class="hover:text-blue-400 transition-colors">Tools</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#credentials" class="hover:text-blue-400 transition-colors">Credentials</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3 shrink-0">
+        <a href="#contact" class="px-4 py-2 text-xs font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors">
+          Get in Touch
+        </a>
+      </div>
+
+      <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-400 hover:text-white" onclick="toggleMobileMenu()">
+        ☰
+      </button>
+    </div>
+
+    <div id="mobileDrawer" class="hidden md:hidden bg-[#0c1326] border-b border-slate-800 px-6 py-4 space-y-3">
+      <div class="flex flex-col space-y-2 text-sm font-medium text-slate-300">
+        <a href="#about" onclick="toggleMobileMenu()" class="py-1">About</a>
+        <a href="#skills" onclick="toggleMobileMenu()" class="py-1">Skills</a>
+        <a href="#tools" onclick="toggleMobileMenu()" class="py-1">Tools</a>
+        <a href="#projects" onclick="toggleMobileMenu()" class="py-1">Projects</a>
+        <a href="#credentials" onclick="toggleMobileMenu()" class="py-1">Credentials</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="py-1">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-28 pb-14 md:pt-36 md:pb-20 overflow-hidden cyber-grid border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#0e162b] border border-blue-500/30 text-xs font-mono text-slate-300">
+            <span class="text-emerald-400 font-bold">ashwin@itiss:~$</span>
+            <span class="text-blue-300">cat bio.nfo</span>
+          </div>
+
+          <div class="space-y-1.5">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+              Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-400">Ashwin Debre</span>
+            </h1>
+            <div class="h-8 flex items-center">
+              <span class="text-base sm:text-lg font-mono text-blue-400 font-semibold tracking-wide">
+                &gt; <span id="typingSubtitle">IT Infrastructure & System Security Engineer</span>
+                <span class="inline-block w-2 h-4 ml-1 bg-emerald-400 cursor-blink align-middle"></span>
+              </span>
+            </div>
+          </div>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl">
+            Architecting zero-trust networks, automated DevSecOps pipelines, and hardened cloud infrastructure. CDAC ITISS Engineer.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-mono">
+            <span class="text-emerald-400 font-medium">CDAC ITISS</span>
+            <span>·</span>
+            <span class="text-blue-300">RHCSA</span>
+            <span>·</span>
+            <span class="text-slate-300">AWS SAA</span>
+            <span>·</span>
+            <span class="text-emerald-300">CompTIA Security+</span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 pt-1">
+            <a href="#contact" class="px-5 py-2 text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow transition-all">
+              Initiate Contact
+            </a>
+            <a href="#tools" class="px-5 py-2 text-xs sm:text-sm font-semibold text-slate-200 bg-[#101935] hover:bg-[#16234b] border border-blue-500/30 rounded-lg transition-all">
+              View Tools & Languages
+            </a>
+            <button onclick="window.print()" class="px-4 py-2 text-xs sm:text-sm font-medium text-slate-300 hover:text-white bg-slate-900 border border-slate-800 rounded-lg transition-all">
+              Print CV
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-[300px] sm:max-w-[340px]">
+            <div class="bg-[#0d1424] border border-blue-500/40 rounded-2xl p-2.5 shadow-2xl">
+              <div class="aspect-square w-full rounded-xl overflow-hidden border border-slate-800 bg-[#080d19]">
+                <img src="/src/assets/images/profile_engineer_portrait_1793947447316.jpg" alt="Ashwin Debre" class="w-full h-full object-cover">
+              </div>
+              <div class="mt-2.5 p-2 rounded-lg bg-[#090f21] border border-slate-800 flex justify-between text-xs font-mono">
+                <span class="text-slate-400">ROLE: SecOps & Cloud</span>
+                <span class="text-emerald-400 font-medium">SELinux: Enforcing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div>
+          <p class="text-2xl font-bold text-white font-mono">450+</p>
+          <p class="text-xs text-slate-400">Lab Hours</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-white font-mono">18</p>
+          <p class="text-xs text-slate-400">Hardened Networks</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-white font-mono">12</p>
+          <p class="text-xs text-slate-400">CIS Playbooks</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-white font-mono">99.9%</p>
+          <p class="text-xs text-slate-400">Uptime SLA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-[#0a0f1d] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <span class="text-xs font-mono text-blue-400 font-semibold uppercase">01. Background</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">About Me</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-3 text-sm text-slate-300 leading-relaxed">
+          <p class="text-base font-medium text-white">
+            Building resilient systems and automating zero-trust security postures.
+          </p>
+          <p class="text-slate-400 text-sm">
+            CDAC ITISS graduate with intensive hands-on experience in enterprise Linux administration, multi-site network fabrics, firewall engineering (pfSense/Fortinet), and container security orchestration. Focused on reproducible Infrastructure as Code and uncompromising defense-in-depth.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 space-y-2.5">
+          <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+            <h4 class="text-xs font-bold text-white mb-0.5">Zero-Trust Architecture</h4>
+            <p class="text-xs text-slate-400">Identity-aware access, mutual TLS, and dynamic micro-segmentation.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+            <h4 class="text-xs font-bold text-white mb-0.5">Infrastructure as Code</h4>
+            <p class="text-xs text-slate-400">Version-controlled environments automated via Terraform and Ansible.</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+            <h4 class="text-xs font-bold text-white mb-0.5">Defensive Telemetry</h4>
+            <p class="text-xs text-slate-400">Real-time log ingestion and active response with Wazuh and Elastic Stack.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="py-16 bg-[#080d1a] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">02. Skills</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Core Competencies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- OS -->
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-white">Operating Systems</h3>
+          <div class="space-y-2 text-xs">
+            <div>
+              <div class="flex justify-between mb-0.5 text-slate-300"><span>RHEL 9 / Rocky Linux</span><span class="text-emerald-400 font-mono">92%</span></div>
+              <div class="w-full h-1 bg-slate-800 rounded"><div class="h-1 bg-blue-500 rounded" style="width: 92%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-0.5 text-slate-300"><span>Ubuntu & Debian Server</span><span class="text-emerald-400 font-mono">90%</span></div>
+              <div class="w-full h-1 bg-slate-800 rounded"><div class="h-1 bg-blue-500 rounded" style="width: 90%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-0.5 text-slate-300"><span>Windows Server 2022 & AD DS</span><span class="text-emerald-400 font-mono">86%</span></div>
+              <div class="w-full h-1 bg-slate-800 rounded"><div class="h-1 bg-blue-500 rounded" style="width: 86%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Networking & Security -->
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-white">Networking & Security</h3>
+          <div class="space-y-2 text-xs">
+            <div>
+              <div class="flex justify-between mb-0.5 text-slate-300"><span>TCP/IP, VLANs (802.1Q)</span><span class="text-emerald-400 font-mono">95%</span></div>
+              <div class="w-full h-1 bg-slate-800 rounded"><div class="h-1 bg-emerald-400 rounded" style="width: 95%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-0.5 text-slate-300"><span>Firewalls (pfSense / Fortinet)</span><span class="text-emerald-400 font-mono">92%</span></div>
+              <div class="w-full h-1 bg-slate-800 rounded"><div class="h-1 bg-emerald-400 rounded" style="width: 92%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-0.5 text-slate-300"><span>WireGuard & IPsec VPNs</span><span class="text-emerald-400 font-mono">90%</span></div>
+              <div class="w-full h-1 bg-slate-800 rounded"><div class="h-1 bg-emerald-400 rounded" style="width: 90%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programming Languages & Tools -->
+  <section id="tools" class="py-16 bg-[#090e1c] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <span class="text-xs font-mono text-cyan-400 font-semibold uppercase">03. Stack</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Languages & Tools</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+          <div class="flex justify-between items-center mb-1">
+            <h4 class="text-xs font-bold text-white">Python</h4>
+            <span class="text-[10px] font-mono text-emerald-400">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400">Security automation, Scapy, PyMISP, socket programming.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+          <div class="flex justify-between items-center mb-1">
+            <h4 class="text-xs font-bold text-white">Bash / Shell</h4>
+            <span class="text-[10px] font-mono text-emerald-400">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400">Linux automation, CIS benchmark auditing, cron jobs.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+          <div class="flex justify-between items-center mb-1">
+            <h4 class="text-xs font-bold text-white">PowerShell</h4>
+            <span class="text-[10px] font-mono text-blue-400">Proficient</span>
+          </div>
+          <p class="text-xs text-slate-400">Active Directory scripting, GPO automation, Windows admin.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+          <div class="flex justify-between items-center mb-1">
+            <h4 class="text-xs font-bold text-white">Wireshark & Tshark</h4>
+            <span class="text-[10px] font-mono text-emerald-400">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400">Packet capture, protocol dissection, PCAP filtering.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+          <div class="flex justify-between items-center mb-1">
+            <h4 class="text-xs font-bold text-white">Docker & Kubernetes</h4>
+            <span class="text-[10px] font-mono text-emerald-400">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400">Rootless container security, Cilium eBPF, Helm charts.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#0f172a] border border-slate-800">
+          <div class="flex justify-between items-center mb-1">
+            <h4 class="text-xs font-bold text-white">Terraform & Ansible</h4>
+            <span class="text-[10px] font-mono text-emerald-400">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400">Infrastructure as Code, CIS hardening playbooks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-[#0a0f1d] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <span class="text-xs font-mono text-blue-400 font-semibold uppercase">04. Works</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Featured Projects</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-2">
+          <span class="text-[11px] font-mono text-emerald-400">Network Security</span>
+          <h3 class="text-sm font-bold text-white">Zero-Trust Multi-Site Hybrid Network</h3>
+          <p class="text-xs text-slate-400">Stateful pfSense firewalls, automated WireGuard tunnels, and 802.1X dynamic VLAN assignment.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-2">
+          <span class="text-[11px] font-mono text-emerald-400">DevSecOps</span>
+          <h3 class="text-sm font-bold text-white">Hardened Kubernetes Cluster</h3>
+          <p class="text-xs text-slate-400">3-node cluster with Cilium eBPF network security, Trivy scanning, and HashiCorp Vault.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-2">
+          <span class="text-[11px] font-mono text-emerald-400">Threat Defense</span>
+          <h3 class="text-sm font-bold text-white">SIEM & Threat Hunting Lab</h3>
+          <p class="text-xs text-slate-400">Wazuh + ELK telemetry platform monitoring endpoints with MITRE ATT&CK rules and Python playbooks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+  <section id="credentials" class="py-16 bg-[#080d1a] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">05. Credentials</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Education & Certifications</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-1">
+          <h4 class="text-xs font-bold text-white">PG Diploma in IT Infrastructure, Systems & Security (ITISS)</h4>
+          <p class="text-xs text-slate-300">CDAC ACTS · Pune (2024–2025)</p>
+          <span class="text-xs text-emerald-400 font-mono">Grade: Distinction</span>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-1">
+          <h4 class="text-xs font-bold text-white">Bachelor of Engineering in Computer Science</h4>
+          <p class="text-xs text-slate-300">State University (2020–2024)</p>
+          <span class="text-xs text-emerald-400 font-mono">First Class with Distinction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-16 bg-[#0a0f1d] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-6">
+        <span class="text-xs font-mono text-emerald-400 font-semibold uppercase">06. Contact</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Get in Touch</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-5 p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-2 text-xs">
+          <p class="text-slate-400">Email: <span class="text-white font-mono">ashvindebre@gmail.com</span></p>
+          <p class="text-slate-400">Location: <span class="text-white">Pune / Mumbai, India</span></p>
+          <p class="text-slate-400">Status: <span class="text-emerald-400 font-mono font-medium">Immediate Joiner</span></p>
+          <a href="mailto:ashvindebre@gmail.com" class="block text-center py-2 bg-blue-600 hover:bg-blue-500 text-white rounded font-medium mt-2">
+            Send Email
+          </a>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form class="p-4 rounded-xl bg-[#0f172a] border border-slate-800 space-y-3 text-xs" onsubmit="event.preventDefault(); alert('Message sent!');">
+            <div class="grid grid-cols-2 gap-3">
+              <input type="text" required placeholder="Your Name" class="px-3 py-2 bg-[#0a0f1d] border border-slate-800 rounded text-white focus:outline-none focus:border-blue-500">
+              <input type="email" required placeholder="Your Email" class="px-3 py-2 bg-[#0a0f1d] border border-slate-800 rounded text-white focus:outline-none focus:border-blue-500">
+            </div>
+            <input type="text" required placeholder="Subject" class="w-full px-3 py-2 bg-[#0a0f1d] border border-slate-800 rounded text-white focus:outline-none focus:border-blue-500">
+            <textarea rows="3" required placeholder="Message..." class="w-full px-3 py-2 bg-[#0a0f1d] border border-slate-800 rounded text-white focus:outline-none focus:border-blue-500 resize-none"></textarea>
+            <button type="submit" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#070b16] py-8 text-slate-500 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Ashwin Debre. CDAC ITISS Engineer.</p>
+      <div class="flex gap-4">
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#skills" class="hover:text-blue-400">Skills</a>
+        <a href="#tools" class="hover:text-blue-400">Tools</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    const subtitles = [
+      "IT Infrastructure & System Security Engineer",
+      "Enterprise Network & Zero-Trust Architect",
+      "DevSecOps & CI/CD Pipeline Automation",
+      "Linux Kernel Hardening & Active Directory Admin",
+      "SOC & SIEM Threat Defense"
+    ];
+    let subIdx = 0, charIdx = 0, deleting = false;
+    const typingElem = document.getElementById('typingSubtitle');
+
+    function typeLoop() {
+      const current = subtitles[subIdx];
+      if (!deleting) {
+        typingElem.textContent = current.substring(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === current.length) {
+          deleting = true;
+          setTimeout(typeLoop, 2000);
+          return;
+        }
+      } else {
+        typingElem.textContent = current.substring(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+          deleting = false;
+          subIdx = (subIdx + 1) % subtitles.length;
+          setTimeout(typeLoop, 300);
+          return;
+        }
+      }
+      setTimeout(typeLoop, deleting ? 30 : 60);
+    }
+    typeLoop();
+  </script>
+</body>
+</html>
